@@ -6,7 +6,7 @@ export default function postReducer(state = initialState, action) {
     case GET_POSTS:
       return action.payload;
     case ADD_POSTS:
-      return action.payload;
+      return [...state, action.payload];
     default:
       return state;
   }
